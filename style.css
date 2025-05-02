@@ -8,6 +8,7 @@
 body{
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     flex-grow: 1;
     background-color: #98b599;
     justify-content: center;
