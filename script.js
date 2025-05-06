@@ -20,3 +20,18 @@ window.addEventListener('wheel', (e) => {
     isScrolling = false;
   }, 100); // tempo de debounce
 });
+ 
+  // Mostrar o botão quando rolar a página para baixo
+  window.onscroll = function () {
+    const btn = document.getElementById("btnTopo");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Função para rolar para o topo
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
